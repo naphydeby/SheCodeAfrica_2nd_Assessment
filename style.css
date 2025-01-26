@@ -1,0 +1,260 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ font-family: 'Poppins', sans-serif;
+
+}
+
+nav{
+    width: 100%;
+    padding: 20px 20px;
+    background-color: white;
+    box-shadow: 0px 0px 10px  rgba(0
+    , 0, 0.1);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;  
+    position: fixed;
+    top: 0;
+    z-index: 0;
+}
+nav h1{
+    font-size: 45px;
+    color:#d67f8d;
+    font-weight: 600;
+    animation-name: nav;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;   
+}
+nav ul{
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    font-size: 20px; 
+}
+ 
+nav ul a {
+    text-decoration: none;
+    color: grey;
+    font-weight: 400;
+    transition: 1s ease;
+}
+nav ul a:hover{
+    cursor: pointer;
+    color:#1e1e80ea ; 
+}
+nav .nav-content{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+
+}
+nav .shecode{
+    width: 30%;
+    padding-top: 10px;
+    display: flex;
+    justify-content: end; 
+    font-weight: 700;  
+    color:#1e1e80ea ;
+}
+.mobileview-nav{
+  display: none; 
+}
+
+.sidebar{
+    display: none;
+}
+ 
+ /*********************** MAIN *********************************/
+  main{
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+    padding: 20px; 
+  }
+
+ .hero{
+    width: 100%;
+    background-color:#1e1e80ea ;
+    color: white;
+    margin-top: 20px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    animation-name: hero;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    }
+.hero img{
+    width: 50%;
+    border-top-left-radius:20px;
+      border-bottom-left-radius:20px;
+}
+
+ .hero-text{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6; 
+ }
+ .hero-text h1{
+    font-size: 40px;
+ }
+ .marquee{
+    width: 70%;
+ }
+ .myDetails{
+   text-align: center;
+   margin-top: 20px;
+ }
+ .myDetails h2{
+   color:#1e1e80ea ;
+}
+ .myDetails P{
+   margin-top: 10px;
+   font-size: 20px;
+ }
+
+ /* ********************************************* FOOTER************************************************* */
+ footer {
+   text-align: center;
+   padding: 15px 0;
+   background-color:#1e1e80ea ; 
+   color: white;
+}
+
+footer .myLinks {
+   margin-bottom: 15px;
+}
+
+footer .myLinks a {
+   color: white;
+   margin: 0 8px;
+   font-size: 25px;
+   text-decoration: none;
+}
+footer .myLinks a:hover {
+   color:#d67f8d;
+   margin: 0 8px;
+   font-size: 25px;
+   text-decoration: none;
+}
+
+footer p {
+   margin: 0;
+   font-size: 15px;
+}
+
+   /* Mobile View */
+@media screen and (max-width:640px){
+   
+   .webview-nav{
+    display: none;
+   }
+   .mobileview-nav{
+    display: block;
+    
+  }
+    nav{
+        width: 100%;
+        height: auto;
+        padding: 20px 0px 20px 0px;
+       }
+   
+    nav h1{
+        font-size: 20px;
+        font-weight: 400;
+     }
+     ul{
+        list-style: none;
+        line-height:2.0;
+     }
+     ul a{
+            text-decoration: none;
+            color: grey;
+            font-weight: 400;
+            transition: 0.3s;
+     } 
+    .menu-btn{
+        display: block;    
+    }
+    .listContent{ 
+      display: none;
+    }
+     
+    .sidebar{
+        display: block;
+        width: 80%;
+        height: 100vh;
+        background-color: white;
+        box-shadow: 0px 0px 0px 5px rgba(0, 0 , 0, 0.1);
+       padding: 40px;
+       color: gray;
+       font-size: 20px;
+       position: fixed;
+       top: 0;
+       left: -80%;
+       z-index:1000;  
+       transition: left 0.35s ease;
+     }
+     .sidebar.active{
+        left:0;
+     }
+     h1{
+        font-size: 20px;
+       color: #1e1e80ea;
+    }
+    .listIcon{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;     
+    }
+     .sideBarMenu {
+        font-size: 24px;
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+      main{
+         margin-top: 70px;
+      }
+     
+   .hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+   }
+  
+   .hero img{
+    width: 100%;
+    border-top-right-radius:20px;
+      border-bottom-right-radius:20px;
+ }  
+ .hero-text{
+    width: 100%; 
+ }
+ 
+ .hero-text h1{
+    font-size: 26px;
+    color: white;
+ }
+ .marquee{
+    width: 100%;
+ }
+}
+@keyframes hero {
+     50% {background-color:#1e1e80ea; }
+    50%{background-color:  #d67f8d; }
+}
+
+@keyframes nav {
+ 50% {color: #d67f8d;}
+   50%{color:#1e1e80ea;}
+}
