@@ -239,6 +239,7 @@ footer p {
  }  
  .hero-text{
     width: 100%; 
+    text-align: center;
  }
  
  .hero-text h1{
